@@ -25,6 +25,7 @@ public class CallBroadcastReceiver extends BroadcastReceiver {
     private WindowManager.LayoutParams params;
     private float x;
     private float y;
+    public boolean isScam = false;
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -35,12 +36,15 @@ public class CallBroadcastReceiver extends BroadcastReceiver {
                 if (intent.getStringExtra(TelephonyManager.EXTRA_STATE)
                         .equals(TelephonyManager.EXTRA_STATE_RINGING)) {
 
-                    if (number.equals("+9567695762")){
-                        userName = "Abhi";
-                    }else {
-                        userName = "Unknown";
+                    if (number.equals("+918891623279")){
+                        userName = "Suspected Scammer";
+                        isScam = true;
+                        showWindow(context, userName, number, isScam);
+                    }else if(number.equals("+918848915036")) {
+                        userName = "Property Manager";
+                        isScam = false;
+                        showWindow(context, userName, number, isScam);
                     }
-                    showWindow(context, userName, number);
 
                 } else if (intent.getStringExtra(TelephonyManager.EXTRA_STATE)
                         .equals(TelephonyManager.EXTRA_STATE_IDLE) ||
@@ -52,7 +56,7 @@ public class CallBroadcastReceiver extends BroadcastReceiver {
         }
     }
 
-    private void showWindow(final Context context, String phone, String number) {
+    private void showWindow(final Context context, String phone, String number, boolean isScam) {
         windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         windowLayout = (ViewGroup) View.inflate(context, R.layout.window_call_info, null);
         getLayoutParams();
@@ -60,9 +64,18 @@ public class CallBroadcastReceiver extends BroadcastReceiver {
 
         TextView nameTextView = windowLayout.findViewById(R.id.name);
         TextView numberTextView = windowLayout.findViewById(R.id.userNumber);
+        TextView scamLabelTextView = windowLayout.findViewById(R.id.textViewScamLable);
+
 
         nameTextView.setText(phone);
         numberTextView.setText(number);
+
+        if (isScam){
+            scamLabelTextView.setVisibility(View.VISIBLE);
+        }else {
+            scamLabelTextView.setVisibility(View.GONE);
+
+        }
 
         Button cancelButton = windowLayout.findViewById(R.id.cancel);
         cancelButton.setOnClickListener(view -> closeWindow());
