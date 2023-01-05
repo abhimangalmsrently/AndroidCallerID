@@ -60,8 +60,8 @@
 35
 36        <receiver
 36-->/Users/rentlycoimbatore/AndroidStudioProjects/CallerID/app/src/main/AndroidManifest.xml:27:9-33:20
-37            android:name="abhi.example.calledid.IncomingCallBroadcastReceiver"
-37-->/Users/rentlycoimbatore/AndroidStudioProjects/CallerID/app/src/main/AndroidManifest.xml:27:19-85
+37            android:name="abhi.example.calledid.CallBroadcastReceiver"
+37-->/Users/rentlycoimbatore/AndroidStudioProjects/CallerID/app/src/main/AndroidManifest.xml:27:19-77
 38            android:enabled="true"
 38-->/Users/rentlycoimbatore/AndroidStudioProjects/CallerID/app/src/main/AndroidManifest.xml:28:13-35
 39            android:exported="true" >

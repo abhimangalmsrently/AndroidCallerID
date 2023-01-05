@@ -34,7 +34,7 @@
         </activity>
 
         <receiver
-            android:name="abhi.example.calledid.IncomingCallBroadcastReceiver"
+            android:name="abhi.example.calledid.CallBroadcastReceiver"
             android:enabled="true"
             android:exported="true" >
             <intent-filter>

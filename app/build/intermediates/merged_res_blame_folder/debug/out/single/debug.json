@@ -8,6 +8,10 @@
         "source": "/Users/rentlycoimbatore/AndroidStudioProjects/CallerID/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
+        "merged": "/Users/rentlycoimbatore/AndroidStudioProjects/CallerID/app/build/intermediates/merged_res/debug/drawable_ic_baseline_admin_panel_settings_24.xml.flat",
+        "source": "/Users/rentlycoimbatore/AndroidStudioProjects/CallerID/app/src/main/res/drawable/ic_baseline_admin_panel_settings_24.xml"
+    },
+    {
         "merged": "/Users/rentlycoimbatore/AndroidStudioProjects/CallerID/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "/Users/rentlycoimbatore/AndroidStudioProjects/CallerID/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp"
     },
@@ -48,6 +52,10 @@
         "source": "/Users/rentlycoimbatore/AndroidStudioProjects/CallerID/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
+        "merged": "/Users/rentlycoimbatore/AndroidStudioProjects/CallerID/app/build/intermediates/merged_res/debug/drawable_pop_up_background.xml.flat",
+        "source": "/Users/rentlycoimbatore/AndroidStudioProjects/CallerID/app/src/main/res/drawable/pop_up_background.xml"
+    },
+    {
         "merged": "/Users/rentlycoimbatore/AndroidStudioProjects/CallerID/app/build/intermediates/merged_res/debug/drawable_ic_launcher_background.xml.flat",
         "source": "/Users/rentlycoimbatore/AndroidStudioProjects/CallerID/app/src/main/res/drawable/ic_launcher_background.xml"
     },
@@ -66,6 +74,10 @@
     {
         "merged": "/Users/rentlycoimbatore/AndroidStudioProjects/CallerID/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.webp.flat",
         "source": "/Users/rentlycoimbatore/AndroidStudioProjects/CallerID/app/src/main/res/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/rentlycoimbatore/AndroidStudioProjects/CallerID/app/build/intermediates/merged_res/debug/drawable_rently_logo.png.flat",
+        "source": "/Users/rentlycoimbatore/AndroidStudioProjects/CallerID/app/src/main/res/drawable/rently_logo.png"
     },
     {
         "merged": "/Users/rentlycoimbatore/AndroidStudioProjects/CallerID/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_round.webp.flat",

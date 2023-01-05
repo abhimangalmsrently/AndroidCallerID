@@ -1,14 +1,14 @@
+abhi/example/calledid/permission/SpecialPermissionRequester.java
+ abhi.example.calledid.permission.SpecialPermissionRequester
 abhi/example/calledid/permission/RuntimePermissionRequester.java
  abhi.example.calledid.permission.RuntimePermissionRequester
 abhi/example/calledid/permission/SettingsOpener.java
  abhi.example.calledid.permission.SettingsOpener
-abhi/example/calledid/MainActivity.java
- abhi.example.calledid.MainActivity
-abhi/example/calledid/permission/GoingToSettingsSnackbar.java
- abhi.example.calledid.permission.GoingToSettingsSnackbar
-abhi/example/calledid/IncomingCallBroadcastReceiver.java
- abhi.example.calledid.IncomingCallBroadcastReceiver
 abhi/example/calledid/BuildConfig.java
  abhi.example.calledid.BuildConfig
-abhi/example/calledid/permission/SpecialPermissionRequester.java
- abhi.example.calledid.permission.SpecialPermissionRequester
+abhi/example/calledid/permission/GoingToSettingsSnackbar.java
+ abhi.example.calledid.permission.GoingToSettingsSnackbar
+abhi/example/calledid/CallBroadcastReceiver.java
+ abhi.example.calledid.CallBroadcastReceiver
+abhi/example/calledid/MainActivity.java
+ abhi.example.calledid.MainActivity

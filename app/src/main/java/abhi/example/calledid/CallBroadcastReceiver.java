@@ -30,20 +30,40 @@ public class CallBroadcastReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         if (intent.getAction().equals("android.intent.action.PHONE_STATE")) {
             String number = intent.getStringExtra(TelephonyManager.EXTRA_INCOMING_NUMBER);
-           if (!number.isEmpty()){
-               showWindow(context, number);
-           }
+            String userName = "";
+            if (number != null) {
+                if (intent.getStringExtra(TelephonyManager.EXTRA_STATE)
+                        .equals(TelephonyManager.EXTRA_STATE_RINGING)) {
+
+                    if (number.equals("+9567695762")){
+                        userName = "Abhi";
+                    }else {
+                        userName = "Unknown";
+                    }
+                    showWindow(context, userName, number);
+
+                } else if (intent.getStringExtra(TelephonyManager.EXTRA_STATE)
+                        .equals(TelephonyManager.EXTRA_STATE_IDLE) ||
+                        intent.getStringExtra(TelephonyManager.EXTRA_STATE)
+                        .equals(TelephonyManager.EXTRA_STATE_OFFHOOK)) {
+                    closeWindow();
+                }
+            }
         }
     }
 
-    private void showWindow(final Context context, String phone) {
+    private void showWindow(final Context context, String phone, String number) {
         windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         windowLayout = (ViewGroup) View.inflate(context, R.layout.window_call_info, null);
         getLayoutParams();
         setOnTouchListener();
 
-        TextView numberTextView = windowLayout.findViewById(R.id.number);
-        numberTextView.setText(phone);
+        TextView nameTextView = windowLayout.findViewById(R.id.name);
+        TextView numberTextView = windowLayout.findViewById(R.id.userNumber);
+
+        nameTextView.setText(phone);
+        numberTextView.setText(number);
+
         Button cancelButton = windowLayout.findViewById(R.id.cancel);
         cancelButton.setOnClickListener(view -> closeWindow());
 
@@ -62,7 +82,7 @@ public class CallBroadcastReceiver extends BroadcastReceiver {
                         WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE |
                         WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL,
                 PixelFormat.TRANSLUCENT);
-        params.gravity = Gravity.CENTER;
+        params.gravity = Gravity.NO_GRAVITY;
         params.format = 1;
         params.width = getWindowWidth();
     }
